@@ -1,5 +1,5 @@
 FROM ubuntu:14.04
-
+RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 1655A0AB68576280
 RUN apt-get update && apt-get install -y \
     pkg-config \
     libpng-dev \
