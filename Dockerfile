@@ -17,7 +17,7 @@ RUN apt-get update && apt-get install -y \
     apt-get install -y nodejs
 
 
-RUN pip install -U --allow-unverified https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-0.12.1-cp27-none-linux_x86_64.whl
+RUN pip install -U tensorflow==0.12.1 --allow-unverified https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-0.12.1-cp27-none-linux_x86_64.whl
 
 COPY ./server/requirements.txt /tmp/
 RUN pip install -r /tmp/requirements.txt
