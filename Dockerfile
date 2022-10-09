@@ -16,11 +16,10 @@ RUN apt-get update && apt-get install -y \
     curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash - && \
     apt-get install -y nodejs
 
-RUN pip install -i https://pypi.tuna.tsinghua.edu.cn/simple pip -U
-RUN pip install tensorflow
+
 COPY ./server/requirements.txt /tmp/
 RUN pip install -r /tmp/requirements.txt
-
+RUN pip install -U https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-0.12.1-cp27-none-linux_x86_64.whl
 COPY . /src/
 
 WORKDIR /src/static/
