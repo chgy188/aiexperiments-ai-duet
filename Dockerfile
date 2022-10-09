@@ -16,7 +16,7 @@ RUN apt-get update && apt-get install -y \
     curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash - && \
     apt-get install -y nodejs
 
-RUN pip install --upgrade pip
+RUN pip install -i https://pypi.tuna.tsinghua.edu.cn/simple pip -U
 RUN pip install tensorflow
 COPY ./server/requirements.txt /tmp/
 RUN pip install -r /tmp/requirements.txt
