@@ -11,6 +11,8 @@ RUN apt-get update && apt-get install -y \
     gfortran \
     python \
     python-dev \
+    libxml2-dev \
+    libxslt1-dev \
     python-pip \
     curl && \
     curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash - && \
